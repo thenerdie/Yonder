@@ -7,7 +7,7 @@ with the exception of global game logic. If you have global game logic you'd lik
 
 DONT FORGET TO INITIALIZE YOUR GAME BY CALLING ScreenManager:SwitchStates(<string> state)!
 
-AND DONT FORGET TO ADD ALL OF YOUR SCREENS TO THE ARRAY IN THE SCREENMANAGER CLASS!
+AND DONT FORGET TO ADD ALL OF YOUR SCREENS TO THE "gameStates" ARRAY IN THE SCREENMANAGER CLASS!
 
 ]]--
 
