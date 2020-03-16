@@ -14,7 +14,7 @@ function screen:Load(ScreenManager) -- pass a reference to the ScreenManager. Av
 end
 
 function screen:Draw()
-  
+
 end
 
 function screen:Update(dt)
