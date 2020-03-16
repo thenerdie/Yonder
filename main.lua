@@ -7,12 +7,14 @@ with the exception of global game logic. If you have global game logic you'd lik
 
 DONT FORGET TO INITIALIZE YOUR GAME BY CALLING ScreenManager:SwitchStates(<string> state)!
 
+AND DONT FORGET TO ADD ALL OF YOUR SCREENS TO THE ARRAY IN THE SCREENMANAGER CLASS!
+
 ]]--
 
 local ScreenManager = require("ScreenManager")
 
 function love.load() -- this is where you need to switch to your first screen
-    ScreenManager:SwitchStates("landing")
+    ScreenManager:SwitchStates("<whatever screen you want to go to first>") -- dont forget to add the screen before trying to index it by name
 end
 
 -- Everything below is handled automatically in the ScreenManager class. Just make sure you call all below methods according to the corresponding "love" event to ensure full functionality.
