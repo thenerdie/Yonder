@@ -14,7 +14,7 @@ AND DONT FORGET TO ADD ALL OF YOUR SCREENS TO THE ARRAY IN THE SCREENMANAGER CLA
 local ScreenManager = require("ScreenManager")
 
 function love.load() -- this is where you need to switch to your first screen
-    ScreenManager:SwitchStates("<whatever screen you want to go to first>") -- dont forget to add the screen before trying to index it by name
+    ScreenManager:SwitchStates("exampleScreen") -- dont forget to add the screen before trying to index it by name
 end
 
 -- Everything below is handled automatically in the ScreenManager class. Just make sure you call all below methods according to the corresponding "love" event to ensure full functionality.
