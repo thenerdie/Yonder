@@ -13,7 +13,7 @@ For details check out main.lua in this repo: https://github.com/thenerdie/Yonder
 ]]--
 
 local gameStates = { -- this is where you set the directories of your screens
-	["exampleScreen"] = require("<directory to your screen>")
+	["exampleScreen"] = require("exampleScreen")
 }
 
 -- dont touch anything below unless you know what you are doing :)
