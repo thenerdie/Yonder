@@ -22,13 +22,13 @@ local currState = nil
 
 local self = {}
 -----------------------
-function self:SwitchStates(newState, supressLoad)
+function self:SwitchStates(newState, suppressLoad)
 	if not gameStates[newState] then
 		currState = nil
 		error("Error SM106: newState not found in gameStates")
 	else
 		currState = newState
-		if not supressLoad then self:Load() end
+		if not suppressLoad then self:Load() end
 	end
 end
 --// Common LOVE2D functions, wrapped in ScreenManager
