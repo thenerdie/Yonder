@@ -28,7 +28,7 @@ function self:SwitchStates(newState, supressLoad)
 		error("Error SM106: newState not found in gameStates")
 	else
 		currState = newState
-		if not surpressLoad then self:Load() end
+		if not supressLoad then self:Load() end
 	end
 end
 --// Common LOVE2D functions, wrapped in ScreenManager
