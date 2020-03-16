@@ -2,16 +2,20 @@
 
 CLASS MAIN.LUA
 
-I would highly recommend literally copy/pasting this script VERBATUM into your project. Game logic is not defined here anyway; it is defined in your screens,
+I would highly recommend literally copy/pasting this script verbatum into your project. Game logic is not defined here anyway; it is defined in your screens,
 with the exception of global game logic. If you have global game logic you'd like to implement, feel free to put it here.
+
+DONT FORGET TO INITIALIZE YOUR GAME BY CALLING ScreenManager:SwitchStates(<string> state)!
 
 ]]--
 
 local ScreenManager = require("ScreenManager")
 
-function love.load()
+function love.load() -- this is where you need to switch to your first screen
     ScreenManager:SwitchStates("landing")
 end
+
+-- Everything below is handled automatically in the ScreenManager class. Just make sure you call all below methods according to the corresponding "love" event to ensure full functionality.
 
 function love.draw()
     ScreenManager:Draw()
