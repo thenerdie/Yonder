@@ -3,8 +3,8 @@ local ScreenManager = require("Yonder").ScreenManager
 local defaultGameResolution = {x=1980,y=1080}
 
 function love.load()
-    love.window.setTitle("STA")
-    ScreenManager:SwitchStates("landing")
+    love.window.setTitle("Your Yonder App")
+    ScreenManager:SwitchStates("exampleScreen")
 end
 
 function love.draw()
