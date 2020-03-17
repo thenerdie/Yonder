@@ -33,4 +33,8 @@ function screen:KeyPressed(key)
 
 end
 
+function screen:KeyReleased(key)
+
+end
+
 return screen
