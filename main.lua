@@ -1,26 +1,18 @@
---[[
+local ScreenManager = require("Yonder").ScreenManager
 
-CLASS MAIN.LUA
+local defaultGameResolution = {x=1980,y=1080}
 
-I would highly recommend literally copy/pasting this script verbatum into your project. Game logic is not defined here anyway; it is defined in your screens,
-with the exception of global game logic. If you have global game logic you'd like to implement, feel free to put it here.
-
-DONT FORGET TO INITIALIZE YOUR GAME BY CALLING ScreenManager:SwitchStates(<string> state)!
-
-AND DONT FORGET TO ADD ALL OF YOUR SCREENS TO THE "gameStates" ARRAY IN THE SCREENMANAGER CLASS!
-
-]]--
-
-local ScreenManager = require("ScreenManager")
-
-function love.load() -- this is where you need to switch to your first screen
-    ScreenManager:SwitchStates("exampleScreen") -- dont forget to add the screen before trying to index it by name
+function love.load()
+    love.window.setTitle("STA")
+    ScreenManager:SwitchStates("landing")
 end
 
--- Everything below is handled automatically in the ScreenManager class. Just make sure you call all below methods according to the corresponding "love" event to ensure full functionality.
-
 function love.draw()
+    local dimX, dimY = love.graphics.getDimensions()
+    love.graphics.push()
+    love.graphics.scale(dimX/defaultGameResolution.x, dimY/defaultGameResolution.y)
     ScreenManager:Draw()
+    love.graphics.pop()
 end
 
 function love.update(dt)
@@ -41,4 +33,8 @@ end
 
 function love.mousereleased(x, y, button)
     ScreenManager:MouseReleased(x, y, button)
+end
+
+function love.mousemoved(x, y, dx, dy, istouch)
+    ScreenManager:MouseMoved(x, y, dx, dy, istouch)
 end
